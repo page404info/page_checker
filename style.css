@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 325px;
+  width: 225px;
+  background-color: #eff7ea;
+}
+
+h1 {
+  margin-bottom: 5px;
+  font-family: ‘Noto Sans’, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  color: #696854;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  height: 30px;
+  width: 95px;
+  outline: none;
+  margin: 4px 1px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+button.show {
+  background-color: #4caf50;
+}
+
+button.disable {
+  background-color: #888888;
+}
+
+button.text {
+  background-color: #008cba;
+}
+
+button:hover:not(.header).show {
+  background-color: #d7e2d1;
+  color: #4caf50;
+}
+
+button:hover:not(.header).disable {
+  background-color: #d7e2d1;
+  color: #888888;
+}
+
+button:hover:not(.header).text {
+  background-color: #d7e2d1;
+  color: #008cba;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d7e2d1;
+  height: 45px;
+  margin-bottom: 5px;
+}
+
+footer {
+  margin: 10px 0 3px;
+}
+
+footer button {
+  background-color: #eff7ea;
+  cursor: auto;
+  border: 1px solid #696854;
+}
+
+footer a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #696854;
+  font-weight: 700;
+}
+
+#wrapper-block a {
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.8px 0;
+}
+
+#wrapper-block a:hover:not(.header) {
+  background-color: #d7e2d1;
+  color: #4caf50;
+}
+
+#email {
+  font-size: 12px;
+  cursor: pointer;
+}
