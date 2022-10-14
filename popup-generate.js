@@ -111,7 +111,7 @@ specAbc.addEventListener(
   false
 );
 
-var specSign = document.getElementById("specSign");
+var specSign = document.getElementById("specChar");
 specSign.addEventListener(
   "click",
   function (event) {

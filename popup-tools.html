@@ -1,55 +1,121 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <div>
+          <h4 class="mt-1 fs-6 text-center">
+            <a
+              href="https://page404info.github.io/dictionary/tools/tools-main.html"
+              target="_blank"
+              >PageChecker</a
+            >
+          </h4>
+        </div>
+      </header>
 
-<body class="text-center">
+      <nav>
+        <div class="row">
+          <div class="col">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link" href="popup.html">Structure</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#"><b>Tools</b></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="popup-generate.html">Generate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="popup-check-list.html">Check List</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-  <header>
-    <div>
-      <h1 style="font-size: 24px;">Tools</h1>
+      <main>
+        <div class="row mt-3 mb-2">
+          <div class="col-1"></div>
+          <div class="col-6">
+            <a
+              href="https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm"
+              target="_blank"
+              >WebDeveloper</a
+            ><br />
+            <a href="https://validator.w3.org/nu/" target="_blank">HTML</a> /
+            <a href="https://jigsaw.w3.org/css-validator/" target="_blank"
+              >CSS checker</a
+            ><br />
+            <a
+              href="https://chrome.google.com/webstore/detail/grid-ruler/joadogiaiabhmggdifljlpkclnpfncmj/related"
+              target="_blank"
+              >RulerLine</a
+            >&ensp;
+            <a
+              href="https://chrome.google.com/webstore/detail/smart-page-ruler/nmibbjghlmdiafjolcphdggihcbcedmg/related?hl=ru"
+              target="_blank"
+              >RulerSize</a
+            ><br />
+            <a
+              href="https://chrome.google.com/webstore/detail/json-viewer/aimiinbnnkboelefkjlenlgimcabobli?hl=ru"
+              target="_blank"
+              >JSON</a
+            >
+            /
+            <a
+              href="https://chrome.google.com/webstore/detail/css-viewer-for-google-chr/eedfldkdghfkhdcanjnfiklpeehbfoag/related?hl=ru"
+              target="_blank"
+              >CSS viewer</a
+            ><br />
+            <a
+              href="https://chrome.google.com/webstore/detail/ultimate-color-picker/clkoagfbjkilljcajbbielofkeokbhma/related?hl=uk"
+              target="_blank"
+              >ColorPicker</a
+            >
+          </div>
+
+          <div class="col-5">
+            <a
+              href="https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni"
+              target="_blank"
+              >Accessibility</a
+            ><br />
+            <a
+              href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh"
+              target="_blank"
+              >WaveChecker</a
+            ><br />
+            <a
+              href="https://chrome.google.com/webstore/detail/waspinspector-analytics-s/niaoghengfohplclhbjnjheodgkejpih"
+              target="_blank"
+              >WASP inspector</a
+            >
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <hr class="mb-0 pb-0" />
+
+        <div>
+          <p class="small text-center mt-1 pt-0 mb-2">
+            &copy; Valeriy Novikov, 2022
+          </p>
+        </div>
+      </footer>
     </div>
-  </header>
-
-  <main>
-    <div>
-      <button id="numberGenerate" class="text">Number</button>
-      <button id="getLength" class="text">Length</button>
-
-      <button id="textEn" class="disable">text_En</button>
-      <button id="abcEn" class="show">abc_En</button>
-      <button id="textUk" class="disable">text_Uk</button>
-      <button id="abcUk" class="show">abc_Uk</button>
-      <button id="textRu" class="disable">text_Ru</button>
-      <button id="abcRu" class="show">abc_Ru</button>
-
-      <button id="specAbc" class="show">spec_abc</button>
-      <button id="specSign" class="show">spec_char</button>
-    </div>
-
-    <div>
-      <p class="text mb-0 pb-0"><a href="#">e-mail generator</a></p>
-    </div>
-  </main>
-
-  <footer>
-    <div>
-      <hr class="mt-0 mb-0" />
-      <button><a href="/popup.html">PageChecker</a></button><button><a
-          href="/popup-extensions.html">Extensions</a></button>
-    </div>
-
-    <div>
-    <p id="email">&copy; Valeriy Novikov, 2022</p>
-    </div>
-  </footer>
-
-  <script src="popup-tools.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,71 +1,104 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <div class="conteiner">
+      <header>
+        <div>
+          <h4 class="mt-1 fs-6 text-center">
+            <a
+              href="https://page404info.github.io/dictionary/tools/tools-main.html"
+              target="_blank"
+              >PageChecker</a
+            >
+          </h4>
+        </div>
+      </header>
 
-<body class="text-center">
+      <nav>
+        <div class="row">
+          <div class="col">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#"
+                  ><b>Structure</b></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="popup-tools.html">Tools</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="popup-generate.html">Generate</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="popup-check-list.html">Check List</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-  <header>
-    <div>
-      <h1 style="font-size: 24px;"><a href="https://page404info.github.io/dictionary/tools/tools-main.html"
-          target="_blank">PageChecker</a></h1>
+      <main>
+        <div class="row mt-3 mb-2">
+          <div class="col-1"></div>
+          <div class="col-3">            
+            <a id="showLinks" href="#"> Links </a><br />
+            <a id="showHeaders" href="#"><b>H1-H6</b></a><br />
+            <a id="showTables" href="#">Tables</a><br />
+            <a id="showInputs" href="#"><b>Inputs</b></a><br />
+            <a id="showButtons" href="#">Buttons</a>
+          </div>
+
+          <div class="col-4">
+            <a id="disableImages" href="#"><b>X</b> images</a><br />
+            <a id="disableInnerStyle" href="#"><b>X</b> inner style</a><br />
+            <a id="disableOuterStyle" href="#"><b>X</b> outer style</a
+            ><br /><br />
+            <a id="selectAll" href="#"><b>select All</b></a>
+          </div>
+
+          <div class="col-3">
+            <a id="editText" href="#"><b>edit text</b></a
+            ><br /><br />
+
+            <a id="getText" href="#"><b>get text</b></a
+            ><br />
+            <a
+              href="https://languagetool.org/"
+              title="check spelling"
+              target="_blank"
+              >langtool</a
+            ><br>
+            <a
+              href="https://www.corrector.co/ru/"
+              title="check spelling"
+              target="_blank"
+              >corrector</a
+            >
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </main>
+
+      <footer>
+        <hr class="mb-0 pb-0">
+
+        <div>
+          <p class="small text-center mt-1 pt-0 mb-2">&copy; Valeriy Novikov, 2022</p>
+        </div>
+      </footer>
     </div>
-  </header>
 
-  <main>
-    <div>
-      <button id="showHeaders" class="show" title="show headers">H1-H6</button>
-      <button id="showTables" class="show" title="show tables">Tables</button>
-      <button id="showButtons" class="show" title="show buttons">
-        Buttons
-      </button>
-      <button id="showInputs" class="show" title="show input fields">
-        Inputs
-      </button>
-      <button id="showLinks" class="show" title="show links">Links</button>
-
-      <button id="disableImages" class="disable" title="disable images">
-        <b>X</b> images
-      </button>
-      <button id="disableInnerStyle" class="disable" title="disable inner styles">
-        <b>X</b> inner style
-      </button>
-      <button id="disableOuterStyle" class="disable" title="disable outer styles">
-        <b>X</b> outer style
-      </button>
-
-      <button id="getText" class="text">get text</button>
-      <button id="editText" class="text">edit text</button>
-    </div>
-
-    <div>
-      <p class="mb-0 pb-0">
-        <a id="selectAll" href="#">select All</a>
-        &nbsp;
-        <a href="https://languagetool.org/" title="check spelling" target="_blank">langtool</a>&nbsp;
-        <a href="https://www.corrector.co/ru/" title="check spelling" target="_blank">corrector</a>
-      </p>
-    </div>
-  </main>
-
-  <footer>
-    <div>
-      <hr class="mt-0 pt-0 mb-0 pb-0" />
-      <button><a href="/popup-tools.html">Tools</a></button><button><a
-          href="/popup-extensions.html">Extensions</a></button>
-    </div>
-
-    <div>
-      <p id="email">&copy; Valeriy Novikov, 2022</p>
-    </div>
-  </footer>
-
-  <script src="popup.js"></script>
-</body>
-
+    <script src="popup.js"></script>
+  </body>
 </html>
