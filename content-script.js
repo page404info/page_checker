@@ -23,6 +23,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     userDisableOuterStyle();
   } else if (request.greeting == "getText") {
     userGetText();
+  } else if (request.greeting == "getInfo") {
+    userGetInfo();
   } else if (request.greeting == "editText") {
     userEditText();
   } else if (request.greeting == "selectAll") {
@@ -213,6 +215,62 @@ function userDisableOuterStyle() {
 function userGetText() {
   let body = document.querySelector("body");
   console.log(body.innerText);
+  alert("open CONSOLE (F12)");
+}
+
+function userGetInfo() {
+  var actualInnerWidth =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  var actualInnerHeight =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
+
+    console.log("***");
+  console.log("* lastModified = " + window.document.lastModified);
+  console.log("* " + navigator.userAgent);
+  console.log("* " + 
+    navigator.platform + ", " + navigator.product + ", " + navigator.vendor
+  );
+  console.log(
+    "* lang = " +
+      window.navigator.language +
+      "    langs = " +
+      window.navigator.languages +
+      "    protocol = " + 
+      window.location.protocol
+  );
+  console.log();
+  console.log(
+    "* monitorFullSize = " +
+      window.screen.width +
+      " x " +
+      window.screen.height +
+      " px"
+  );
+  console.log(
+    "* actualInnerSize = " + actualInnerWidth + " x " + actualInnerHeight + " px"
+  );
+  console.log("* url  = " + window.document.URL);
+  console.log("* title  = " + window.document.title);
+  console.log("* isCookieEnabled = " + navigator.cookieEnabled + "    cookie = " + window.document.cookie);
+  console.log("* localStorageLength = " + window.localStorage.length);
+  console.log("* sessionStorageLength = " + window.sessionStorage.length);
+  console.log("* cacheStorageLength = " + window.CacheStorage.length);
+  console.log("* PERFORMANCE (jsHeap): limit = " + window.performance.memory.jsHeapSizeLimit +
+   "    totalSize = " + window.performance.memory.totalJSHeapSize + "    usedSize = " + window.performance.memory.usedJSHeapSize
+  );
+
+  console.log(window.navigator);
+  console.log(window.document.location);
+  console.log(window.document);
+  console.log(window.indexedDB);
+
+  console.log("***");
+  
   alert("open CONSOLE (F12)");
 }
 

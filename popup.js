@@ -161,6 +161,24 @@ document.getElementById("getText").addEventListener(
   false
 );
 
+document.getElementById("getInfo").addEventListener(
+  "click",
+  function () {
+    //выбираем активную вкладку
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      //отправляем сообщение на страницу
+      chrome.tabs.sendMessage(
+        tabs[0].id,
+        { greeting: "getInfo" },
+        function (response) {
+          console.log(response);
+        }
+      );
+    });
+  },
+  false
+);
+
 document.getElementById("editText").addEventListener(
   "click",
   function () {
