@@ -229,21 +229,22 @@ function userGetInfo() {
     document.documentElement.clientHeight ||
     document.body.clientHeight;
 
-    console.log("***");
+  console.log("***");
   console.log("* lastModified = " + window.document.lastModified);
   console.log("* " + navigator.userAgent);
-  console.log("* " + 
-    navigator.platform + ", " + navigator.product + ", " + navigator.vendor
-  );
   console.log(
-    "* lang = " +
+    "* " +
+      navigator.platform +
+      ", " +
+      navigator.product +
+      ", " +
+      navigator.vendor +
+      ", mainLang = " +
       window.navigator.language +
-      "    langs = " +
-      window.navigator.languages +
-      "    protocol = " + 
-      window.location.protocol
+      ", langs = " +
+      window.navigator.languages
   );
-  console.log();
+
   console.log(
     "* monitorFullSize = " +
       window.screen.width +
@@ -252,16 +253,35 @@ function userGetInfo() {
       " px"
   );
   console.log(
-    "* actualInnerSize = " + actualInnerWidth + " x " + actualInnerHeight + " px"
+    "* actualInnerSize = " +
+      actualInnerWidth +
+      " x " +
+      actualInnerHeight +
+      " px"
   );
-  console.log("* url  = " + window.document.URL);
-  console.log("* title  = " + window.document.title);
-  console.log("* isCookieEnabled = " + navigator.cookieEnabled + "    cookie = " + window.document.cookie);
+  console.log("* URL  = " + window.document.URL);
+  console.log(
+    "* protocol = " +
+      window.location.protocol +
+      "    title  = " +
+      window.document.title
+  );
+  console.log(
+    "* isCookieEnabled = " +
+      navigator.cookieEnabled +
+      "    cookie = " +
+      window.document.cookie
+  );
   console.log("* localStorageLength = " + window.localStorage.length);
   console.log("* sessionStorageLength = " + window.sessionStorage.length);
   console.log("* cacheStorageLength = " + window.CacheStorage.length);
-  console.log("* PERFORMANCE (jsHeap): limit = " + window.performance.memory.jsHeapSizeLimit +
-   "    totalSize = " + window.performance.memory.totalJSHeapSize + "    usedSize = " + window.performance.memory.usedJSHeapSize
+  console.log(
+    "* PERFORMANCE (jsHeap): limit = " +
+      window.performance.memory.jsHeapSizeLimit +
+      "    totalSize = " +
+      window.performance.memory.totalJSHeapSize +
+      "    usedSize = " +
+      window.performance.memory.usedJSHeapSize
   );
 
   console.log(window.navigator);
@@ -270,7 +290,7 @@ function userGetInfo() {
   console.log(window.indexedDB);
 
   console.log("***");
-  
+
   alert("open CONSOLE (F12)");
 }
 
